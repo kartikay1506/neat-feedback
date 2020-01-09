@@ -21,6 +21,59 @@ $(document).ready(function() {
                 $('#questions').hide();
             }
             else {
+                switch(value) {
+                    case "LetzConnect" :
+                        $('#bucket').val("Placement Support");
+                        break; 
+                    case "Glabs" :
+                        $('#bucket').val("Certification Course");
+                        break;
+                    case "ONE.class" :
+                        $('#bucket').val("Class Management");
+                        break;
+                    case "PupilFirst" :
+                        $('#bucket').val("Digital learning");
+                        break;
+                    case "Aspiration.ai" :
+                        $('#bucket').val("Certification Course");
+                        break;
+                    case "upGrad for College" :
+                        $('#bucket').val("Digital Learning");
+                        break;
+                    case "Visual Learning" :
+                        $('#bucket').val("Digital Learning");
+                        break;
+                    case "FACE ProGrad" :
+                        $('#bucket').val("Digital Learning");
+                        break;
+                    case "STEP TRAIN" :
+                        $('#bucket').val("Certification Course");
+                        break;
+                    case "Interactive Teaching and Learning Platform" :
+                        $('#bucket').val("Coding Course");
+                        break;
+                    case "E-Box" :
+                        $('#bucket').val("Coding Course");
+                        break;
+                    case "Talent Rank" :
+                        $('#bucket').val("Assessment Tests");
+                        break;
+                    case "Accelerator Program" :
+                        $('#bucket').val("Certification Course");
+                        break;
+                    case "EnglishBolo" :
+                        $('#bucket').val("Digital Learning");
+                        break;
+                    case "Career Path Navigator" :
+                        $('#bucket').val("Assessment Tests");
+                        break;
+                    case "Job Readiness" :
+                        $('#bucket').val("Assessment Tests");
+                        break;
+                    case "Embibe for Learners & Educators" :
+                        $('#bucket').val("Assessment Tests");
+                        break;
+                }
                 $('#questions').show();
             }
         });
@@ -36,13 +89,6 @@ $(document).ready(function() {
             }
         });
 
-        $('input[type="range"]').rangeslider();
-
-        $('input[type="range"]').on("input", function() {
-            var value = $(this).val();
-            $(this).siblings().text(value);
-            $(this).siblings().val(value);
-        });
     }
     else if(route == '/stats') {
         $('#products').change(function() {

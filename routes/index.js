@@ -18,7 +18,7 @@ router.get('/stats', (req, resp) => {
 
 //Get Student Response
 router.post('/studentresponse', (req, resp) => {
-    const { fullname, email, number, college, admission_no, product, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8 } = req.body;
+    const { fullname, email, number, college, admission_no, product, bucket, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8 } = req.body;
 
     StudentResponse.findOne({ email: email, product: product })
     .then(response => {
@@ -36,6 +36,7 @@ router.post('/studentresponse', (req, resp) => {
                 college: college,
                 admission_no: admission_no,
                 product: product,
+                bucket: bucket,
                 answer1: answer1,
                 answer2: answer2,
                 answer3: answer3,
@@ -56,7 +57,7 @@ router.post('/studentresponse', (req, resp) => {
 
 //Get Teacher Response
 router.post('/teacherresponse', (req, resp) => {
-    const { fullname, email, number, college, employee_id, product, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8 } = req.body;
+    const { fullname, email, number, college, employee_id, product, bucket, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8 } = req.body;
 
     TeacherResponse.findOne({ email: email, product: product })
     .then(response => {
@@ -75,6 +76,7 @@ router.post('/teacherresponse', (req, resp) => {
                 college: college,
                 employee_id: employee_id,
                 product: product,
+                bucket: bucket,
                 answer1: answer1,
                 answer2: answer2,
                 answer3: answer3,

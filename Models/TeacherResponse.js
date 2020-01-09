@@ -25,6 +25,11 @@ const TeacherResponseSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    bucket: {
+        type: String,
+        required: true
+    },
+
     answer1: {
         type: String,
         required: true
