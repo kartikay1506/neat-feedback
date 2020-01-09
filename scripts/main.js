@@ -78,6 +78,71 @@ $(document).ready(function() {
             }
         });
 
+
+        $('#teacherproduct').on("change", function() {
+            var value = $(this).val();
+
+            if(value == "select") {
+                $('#questions').hide();
+            }
+            else {
+                switch(value) {
+                    case "LetzConnect" :
+                        $('#bucket1').val("Placement Support");
+                        break; 
+                    case "Glabs" :
+                        $('#bucket1').val("Certification Course");
+                        break;
+                    case "ONE.class" :
+                        $('#bucket1').val("Class Management");
+                        break;
+                    case "PupilFirst" :
+                        $('#bucket1').val("Digital learning");
+                        break;
+                    case "Aspiration.ai" :
+                        $('#bucket1').val("Certification Course");
+                        break;
+                    case "upGrad for College" :
+                        $('#bucket1').val("Digital Learning");
+                        break;
+                    case "Visual Learning" :
+                        $('#bucket1').val("Digital Learning");
+                        break;
+                    case "FACE ProGrad" :
+                        $('#bucket1').val("Digital Learning");
+                        break;
+                    case "STEP TRAIN" :
+                        $('#bucket1').val("Certification Course");
+                        break;
+                    case "Interactive Teaching and Learning Platform" :
+                        $('#bucket1').val("Coding Course");
+                        break;
+                    case "E-Box" :
+                        $('#bucket1').val("Coding Course");
+                        break;
+                    case "Talent Rank" :
+                        $('#bucket1').val("Assessment Tests");
+                        break;
+                    case "Accelerator Program" :
+                        $('#bucket1').val("Certification Course");
+                        break;
+                    case "EnglishBolo" :
+                        $('#bucket1').val("Digital Learning");
+                        break;
+                    case "Career Path Navigator" :
+                        $('#bucket1').val("Assessment Tests");
+                        break;
+                    case "Job Readiness" :
+                        $('#bucket1').val("Assessment Tests");
+                        break;
+                    case "Embibe for Learners & Educators" :
+                        $('#bucket1').val("Assessment Tests");
+                        break;
+                }
+                $('#questions').show();
+            }
+        });
+
         $('#teacherproduct').on("change", function() {
             var value = $(this).val();
 
