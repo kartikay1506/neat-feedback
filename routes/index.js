@@ -129,4 +129,22 @@ router.post('/getteacherstats', (req, resp) => {
     .catch(err => console.log(err));
 });
 
+//Get Total Stats
+router.post('/gettotal', (req, resp) => {
+    const total = [];
+
+    TeacherResponse.collection.countDocuments()
+    .then(teachercount => {
+        total.push(teachercount);
+        StudentResponse.collection.countDocuments()
+        .then(studentcount => {
+            total.push(studentcount);
+            console.log(total);
+            resp.send(total);
+        })
+        .catch(err => console.log(err));
+    })
+    .catch(err => console.log(err));
+});
+
 module.exports = router;

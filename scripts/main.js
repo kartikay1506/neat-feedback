@@ -156,6 +156,18 @@ $(document).ready(function() {
 
     }
     else if(route == '/stats') {
+        $.ajax({
+            url: '/gettotal',
+            method: 'post',
+            success: function(data) {
+                var responses = Object.values(data);
+                $('#totalstudentresponse h4').remove();
+                $('#totalteacherresponse h4').remove();
+
+                $('#totalstudentresponse').append('<h4 class="mb-3">'+responses[1]+'</h4>');
+                $('#totalteacherresponse').append('<h4 class="mb-3">'+responses[0]+'</h4>');
+            }
+        });
         $('#products').change(function() {
             var product = $(this).val();
             console.log(product);
@@ -166,6 +178,7 @@ $(document).ready(function() {
                 data: {product: product},
                 success: function(data) {
                     var responses = Object.values(data);
+                    console.log(responses.length);
                     //Sorting the responses based on average
                     responses.sort((a, b) => {
                         console.log(a.average);
